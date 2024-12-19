@@ -76,7 +76,7 @@ def index() -> rx.Component:
                         State.title,
                     ),
                     rx.image(src=State.image),
-                    align="center"
+                    align="center",
                 ),
                 rx.html(State.content, class_name="prose"),
                 justify="center",
@@ -86,5 +86,5 @@ def index() -> rx.Component:
     )
 
 
-app = rx.App()
+app = rx.App(theme=rx.theme(appearance="light"))
 app.add_page(index)
